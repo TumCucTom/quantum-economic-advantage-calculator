@@ -1,0 +1,5 @@
+.idea
+.DS_Store
+node_modules/
+qeac/node_modules/
+tool/scrape/node_modules/
