@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/quantum-logo.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum Economic Advantage Calculator</title>
+  <script type="module" crossorigin="" src="/assets/index-niMaZqBZ.js"></script>
+  <link rel="stylesheet" crossorigin="" href="/assets/index-xWgeXwfH.css">
+  <link rel="modulepreload" as="script" crossorigin="" href="/assets/Form-zxSTuZQ2.js">
+  <link rel="modulepreload" as="script" crossorigin="" href="/assets/index-niMaZqBZ.js">
+  <link rel="modulepreload" as="script" crossorigin="" href="/assets/highcharts-vue.min-slr4qoxA.js">
+  <link rel="modulepreload" as="script" crossorigin="" href="/assets/katex.min-I4gThi3H.js">
+  <link rel="stylesheet" href="/assets/katex-nDBl4rtf.css">
+  <link rel="stylesheet" href="/assets/Form-omuq4W5D.css">
+  <link rel="modulepreload" as="script" crossorigin="" href="/assets/QuantumAdvantageGraph-LDQUUoaT.js">
+  <link rel="modulepreload" as="script" crossorigin="" href="/assets/QuantumEconomicAdvantageGraph-C2PFs1yD.js">
+  <link rel="modulepreload" as="script" crossorigin="" href="/assets/annotations-RVYHp2M2.js">
+  <link rel="modulepreload" as="script" crossorigin="" href="/assets/QuantumCharacteristicsGraph-Rt87Jqw1.js">
+  <link rel="modulepreload" as="script" crossorigin="" href="/assets/Documentation-5yq5wSok.js">
+</head>
+
+<body>
+  <div id="app" data-v-app="">
+    <div data-v-666660e9="" class="flex flex-col h-screen w-full">
+      <div class="bg-[#002D9D] py-4 px-8" data-v-666660e9="">
+        <div class="mx-auto flex flex-wrap justify-between gap-4 items-center" data-v-666660e9=""><a href="#" class="flex gap-2 items-center" data-v-666660e9=""><img src="/quantum-logo.png" class="h-8" alt="" data-v-666660e9="">
+            <h1 class="text-white text-2xl font-medium" data-v-666660e9="">Quantum Economic Advantage Calculator</h1>
+          </a>
+          <div class="space-x-8" data-v-666660e9=""><a href="#" class="text-white hover:underline" data-v-666660e9="">Calculator</a><a href="#documentation" class="text-white hover:underline" data-v-666660e9="">How does it work?</a><a href="#team" class="text-white hover:underline" data-v-666660e9="">Team</a></div>
+        </div>
+      </div>
+      <div data-v-666660e9="" class="flex-1">
+        <div data-v-666660e9="" class="max-w-prose mx-auto mb-16">
+          <p class="text-gray=900 text-justify my-4">The Quantum Economic Advantage Calculator is an extension of the Quantum Tortoise and Classical Hare framework, which defines Quantum Economic Advantage (QEA) as the point where quantum hardware can solve a given problem faster than comparably priced classical machines. Users can adjust key inputs—such as hardware speeds, qubit roadmaps, and algorithmic runtimes—to explore how different factors influence the timeline for QEA. The tool then generates visualizations, offering an intuitive way to understand when quantum computing may surpass classical methods for various computational tasks. </p>
+          <h2 class="text-2xl font-bold text-gray-800" id="Models"> Models </h2>
+          <p class="text-gray=900 text-justify my-4"> A model in the framework refers to a specific problem-hardware instance being examined. Each model tracks its own parameters and displays its own graphs. </p>
+          <p class="text-gray=900 text-justify my-4"> Upon opening the framework, there will be a template model already created which is ready to edit. Changing any input to the model will have its effects immediately displayed on the corresponding graphs (unless the parameter was changed in a popup menu in which case the user must hit save). </p>
+          <h3 class="text-xl font-bold text-gray-800 mt-8" id="Simple vs Advanced View"> Simple vs Advanced View </h3>
+          <p class="text-gray=900 text-justify my-4"> There are two ways of displaying a model on the user interface. The first is a simple view in which only the two major inputs of problem and hardware can be seen and selected. All the graphs are still visible and this view allows for easy comparison between them across multiple models. The second option is an advanced view in which the user is able to freely manipulate all variables associated with the computation of the graphs. It is more complex and may overwhelm the user if they are not too familiar with quantum hardware so the framework shows the simple view by default and allows users to choose their own level of involvement with the additional parameters. </p>
+          <p class="text-gray=900 text-justify my-4"> Something worth noting is that two separate models could have the same options selected for problem and hardware, yet have very different choices for the remaining parameters. This could result in two models with the same options visible for their simple views but with drastically different graphs. </p>
+          <h2 class="text-2xl font-bold text-gray-800" id="Inputs"> Inputs </h2>
+          <p class="text-gray=900 text-justify my-4"> Each input into the models can be classified as either related to the problem or the hardware. We will refer to the problem and roadmap inputs themselves as major inputs and the inputs dependent on them as minor inputs. Each selectable option for the major inputs has default values for all of its corresponding minor inputs; as a result, changing a model's major inputs will automatically override the values of all its associated minor inputs. Changing a minor input has no effect on the other parameters. </p>
+          <h3 class="text-xl font-bold text-gray-800 mt-8" id="Problem Inputs"> Problem Inputs </h3>
+          <h4 class="text-lg font-medium text-gray-800 mt-8" id="Problem"> Problem </h4>
+          <p class="text-gray=900 text-justify my-4"> The problems serve as a primary input to the framework, determining the classical and quantum runtimes under comparison. The tool provides preset options for users to explore, such as integer factorization, unstructured database search, and the traveling salesman problem, each reflecting the best-known worst-case time complexities for their respective algorithms. </p>
+          <p class="text-gray=900 text-justify my-4"> Classical runtimes are expressed as functions of both <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>n</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">n</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span> (problem size) and <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>p</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">p</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span></span> (number of processors). We denote these runtimes as <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>C</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo separator="true">,</mo>
+                        <mi>p</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">C(n,p)</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">p</span><span class="mclose">)</span></span></span></span></span> and quantum runtimes as <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>Q</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">Q(n)</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></span>. In addition to the preset options, users can fully customize these runtime expressions, adjusting both classical and quantum runtimes or defining new ones entirely. This flexibility allows stakeholders to test hypotheses — for example, exploring how an optimistic projection of quantum runtimes impacts the projected timeline for quantum economic advantage. </p>
+          <p class="text-gray=900 text-justify my-4"> Notably, while increasing <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>p</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">p</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span></span> reduces runtime, the total computational effort, or "classical work," remains unchanged. The classical work is defined as the runtime with a single processor, <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>C</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo separator="true">,</mo>
+                        <mn>1</mn>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">C(n,1)</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span></span>, representing the total number of operations required. </p>
+          <h4 class="text-lg font-medium text-gray-800 mt-8" id="Qubit To Problem Size"> Qubit To Problem Size </h4>
+          <p class="text-gray=900 text-justify my-4"> Qubit to Problem Size (QPS) is a function which maps logical qubits to the maximum problem size achievable with said amount of qubits. The inverse of this function (<span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msup>
+                          <mtext>QPS</mtext>
+                          <mrow>
+                            <mo>−</mo>
+                            <mn>1</mn>
+                          </mrow>
+                        </msup>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\text{QPS}^{-1}</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0818em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord text"><span class="mord">QPS</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8873em;"><span style="top:-3.1362em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span></span>) is also used in some calculations. </p>
+          <h3 class="text-xl font-bold text-gray-800 mt-8" id="Hardware Inputs"> Hardware Inputs </h3>
+          <h4 class="text-lg font-medium text-gray-800 mt-8" id="Roadmap"> Roadmap </h4>
+          <p class="text-gray=900 text-justify my-4"> The primary hardware input is which quantum roadmap the tool will use to extrapolate the number of available qubits. The calculator allows users to modify the existing roadmaps directly. Qubit-year pairs can be adjusted to align with different expectations, and entirely new points can be added to the projection. If a pessimistic user is confident that quantum devices will not exceed a certain amount of physical qubits by a certain year, they have the freedom to update points in the roadmap and all calculations will automatically update to reflect the slower growth. </p>
+          <p class="text-gray=900 text-justify my-4"> By default, the tool estimates exponential growth for the roadmaps. When predicting the number of available qubits, the tool interpolates values between existing points exponentially and extrapolates beyond the final data points using the same growth rate. Users can also choose linear growth instead, in which case the tool interpolates and extrapolates linearly. </p>
+          <p class="text-gray=900 text-justify my-4"> These projections for physical qubits are ultimately used to estimate the number of logical qubits, which then feed into further calculations. Alternatively, users can bypass this step by directly inputting a roadmap for logical qubits. In this case, the tool extrapolates the number of logical qubits directly from the user-defined points, skipping the intermediary calculations involving physical-logical qubit ratios. </p>
+          <h4 class="text-lg font-medium text-gray-800 mt-8" id="Hardware Slowdown"> Hardware Slowdown </h4>
+          <p class="text-gray=900 text-justify my-4"> Hardware slowdown, as previously described, refers to the number of operations a classical computer can perform in the time it takes a comparably priced quantum computer to perform a single operation. Since this factor can vary across a wide range and span multiple orders of magnitude, users input this value logarithmically, as a power of 10. </p>
+          <p class="text-gray=900 text-justify my-4"> The hardware slowdown parameter can be directly input into the calculator. However, the framework also allows users to compute this value by specifying the individual factors that contribute to it. In the original framework, hardware slowdown was expressed as the product of three factors: </p>
+          <ol>
+            <li> Speed Ratio: The ratio of the speed of a classical computer to that of the quantum computer. </li>
+            <li> Gate Overhead: A factor representing the additional gates (operations) required to maintain fault tolerance. </li>
+            <li> Algorithmic Constant Ratio: The ratio of the multiplicative constant from the classical algorithm's runtime to that of the quantum algorithm's. </li>
+          </ol>
+          <p></p>
+          <p class="text-gray=900 text-justify my-4"> With the expressive freedom our tool grants users when inputting problem runtimes, the algorithmic constant ratio is now a redundant parameter, but has remained in the model because of its historical presence. Given these advancements, only the speed ratio and gate overhead are now essential for the calculation. </p>
+          <p class="text-gray=900 text-justify my-4"> Like the hardware slowdown, the speed ratio can either be entered directly into the calculator or calculated from individual factors. Users can provide the 2-qubit gate time of the quantum computer and the clock speed of the classical device. The speed ratio is computed by comparing the classical clock speed by the quantum 2-qubit gate time, giving a direct comparison of how many classical operations can be executed in the time it takes for a single quantum cycle. </p>
+          <h4 class="text-lg font-medium text-gray-800 mt-8" id="Quantum Improvement Rate"> Quantum Improvement Rate </h4>
+          <p class="text-gray=900 text-justify my-4"> The quantum improvement rat (QIR) represents this framework's method of modeling changes in the hardware slowdown over time, expressed as the percentage improvement year-to-year. (In the calculator, improvement rates are expressed as negative values.) QIR is used to calculate the annual reduction in the hardware slowdown. Representing the hardware slowdown in its linear form as <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>S</mi>
+                          <mi>t</mi>
+                        </msub>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                        <msup>
+                          <mn>0</mn>
+                          <msub>
+                            <mtext>hws</mtext>
+                            <mi>t</mi>
+                          </msub>
+                        </msup>
+                      </mrow>
+                      <annotation encoding="application/x-tex">S_t = 10^{\text{hws}_t}</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">hws</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2963em;"><span style="top:-2.357em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>, its change over time can be modeled by: </p>
+          <p class="text-gray=900 text-center my-4"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>S</mi>
+                          <mrow>
+                            <mi>t</mi>
+                            <mo>+</mo>
+                            <mn>1</mn>
+                          </mrow>
+                        </msub>
+                        <mo>=</mo>
+                        <msub>
+                          <mi>S</mi>
+                          <mi>t</mi>
+                        </msub>
+                        <mo>∗</mo>
+                        <mo stretchy="false">(</mo>
+                        <mn>1</mn>
+                        <mo>−</mo>
+                        <mfrac>
+                          <mrow>
+                            <mi>q</mi>
+                            <mi>i</mi>
+                            <mi>r</mi>
+                          </mrow>
+                          <mn>100</mn>
+                        </mfrac>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">S_{t+1} = S_t * (1 - \frac{qir}{100})</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.2528em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9078em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">100</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4461em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span></span></p>
+          <p class="text-gray=900 text-justify my-4"> Users are also free to assume that quantum devices are becoming relatively slower over time, though this represents a rather pessimistic outlook. </p>
+          <h4 class="text-lg font-medium text-gray-800 mt-8" id="Physical-Logical Qubit Ratio"> Physical-Logical Qubit Ratio </h4>
+          <p class="text-gray=900 text-justify my-4"> The physical-logical qubit ratio (PLQR) represents how many physical qubits are needed to encode a single logical qubit. Its value can be directly input into the calculator. </p>
+          <h4 class="text-lg font-medium text-gray-800 mt-8" id="Physical-Logical Qubit Ratio Improvement Rate"> Physical-Logical Qubit Ratio Improvement Rate</h4>
+          <p class="text-gray=900 text-justify my-4"> Just as the hardware slowdown evolves based on the quantum improvement rate, the PLQR is influenced by the physical-logical qubit ratio improvement rate (RIR). This adjustment is input and calculated in the same manner as the quantum improvement rate. The decay of PLQR is limited to a minimum value of 3, reflecting the constraints imposed by the most basic error correction schemes. </p>
+          <h4 class="text-lg font-medium text-gray-800 mt-8" id="Connectivity Penalty"> Connectivity Penalty</h4>
+          <p class="text-gray=900 text-justify my-4"> Connectivity refers to the arrangement of interactions between qubits within a quantum system, often represented as a qubit interaction graph, where vertices correspond to qubits and edges denote allowable direct interactions. In practice, not all qubits in a quantum device can interact directly, and this limited connectivity imposes constraints on quantum algorithm design. </p>
+          <p class="text-gray=900 text-justify my-4"> In the framework, connectivity overhead is modeled as a multiplicative penalty on the quantum runtime. Since the relationship between circuit connectivity and runtime is complex, this parameter was designed to be as freely customizable as the runtimes themselves. The tool accepts expressions in terms of <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>q</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">q</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span></span>, allowing users to adjust connectivity penalties to reflect the specific constraints of their quantum hardware. </p>
+          <h4 class="text-lg font-medium text-gray-800 mt-8" id="Processors">Processors</h4>
+          <p class="text-gray=900 text-justify my-4"> This input represents the number of processors <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mn>1</mn>
+                        <msup>
+                          <mn>0</mn>
+                          <mi>p</mi>
+                        </msup>
+                      </mrow>
+                      <annotation encoding="application/x-tex">10^p</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span></span></span></span></span></span></span></span></span> that would exist in a classical machine that is comparably priced to the quantum one being considered. The number of processors reduces the classical runtime as dictated by its expression. Like the hardware slowdown, it is input logarithmically. </p>
+          <h4 class="text-lg font-medium text-gray-800 mt-8" id="Cost Improvement Rate">Cost Improvement Rate</h4>
+          <p class="text-gray=900 text-justify my-4"> The cost improvement rate (CIR) captures the relative rates of cost reduction for quantum and classical operations over time. Specifically, it is defined as the ratio of the annual rates of change in the costs of quantum and classical operations. For instance, if quantum costs decrease at a rate of 30% per year (0.7 multiplier), while classical costs decrease at a rate of 20% per year (0.8 multiplier), the ratio of change would be 7/8. This implies that quantum costs improve at an effective rate of approximately 12.5% per year relative to classical costs. </p>
+          <p class="text-gray=900 text-justify my-4"> While performance improvements influence the hardware slowdown associated with quantum runtimes in the model, cost reductions primarily determine the number of classical processors that can be leveraged to speed up classical runtimes. If quantum costs decline more rapidly than classical costs, the cost-equivalent classical system becomes smaller over time, as fewer classical processors can be purchased for the same budget. Consequently, in the tool, the number of classical processors dividing into the classical runtime decreases each year. Both cost and performance improvements ultimately impact the problem size required for algorithmic advantage. This assumption applies when quantum costs are improving faster than classical costs, though users have the flexibility to modify or disregard it if needed. </p>
+          <h2 class="text-2xl font-bold text-gray-800" id="Calculations">Calculations</h2>
+          <p class="text-gray=900 text-justify my-4"> With all of the calculator’s inputs introduced, we can finally discuss how the tool calculates its findings. Before we dive into the mathematics, let us present the table below showing how each input is expressed in the equations. </p>
+          <div class="overflow-x-auto mt-6">
+            <table class="table-auto w-full border-collapse border border-gray-300">
+              <thead>
+                <tr class="bg-gray-200">
+                  <th class="border border-gray-300 px-4 py-2">Parameter</th>
+                  <th class="border border-gray-300 px-4 py-2">Symbolic Representation</th>
+                  <th class="border border-gray-300 px-4 py-2">Context</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Problem Size</td>
+                  <td class="border border-gray-300 px-4 py-2"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mi>n</mi>
+                              </mrow>
+                              <annotation encoding="application/x-tex">n</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span></td>
+                  <td class="border border-gray-300 px-4 py-2">The parameter used to calculate runtimes and necessary logical qubits.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Number of Processors</td>
+                  <td class="border border-gray-300 px-4 py-2"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mn>1</mn>
+                                <msup>
+                                  <mn>0</mn>
+                                  <mi>p</mi>
+                                </msup>
+                              </mrow>
+                              <annotation encoding="application/x-tex">10^p</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span></span></span></span></span></span></span></span></span></td>
+                  <td class="border border-gray-300 px-4 py-2">A factor dividing into the parallelizable classical runtime.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Classical Runtime</td>
+                  <td class="border border-gray-300 px-4 py-2"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mi>C</mi>
+                                <mo stretchy="false">(</mo>
+                                <mi>n</mi>
+                                <mo separator="true">,</mo>
+                                <mn>1</mn>
+                                <msup>
+                                  <mn>0</mn>
+                                  <mi>p</mi>
+                                </msup>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                              <annotation encoding="application/x-tex">C(n, 10^p)</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></td>
+                  <td class="border border-gray-300 px-4 py-2">A function in terms of problem size and the number of processors.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Quantum Runtime</td>
+                  <td class="border border-gray-300 px-4 py-2"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mi>Q</mi>
+                                <mo stretchy="false">(</mo>
+                                <mi>n</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                              <annotation encoding="application/x-tex">Q(n)</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></span></td>
+                  <td class="border border-gray-300 px-4 py-2">A function in terms of problem size.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Qubit to Problem Size</td>
+                  <td class="border border-gray-300 px-4 py-2"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mi>Q</mi>
+                                <mi>P</mi>
+                                <mi>S</mi>
+                              </mrow>
+                              <annotation encoding="application/x-tex">QPS</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">QPS</span></span></span></span></span></td>
+                  <td class="border border-gray-300 px-4 py-2">Function used to calculate the maximum feasible problem size from the number of logical qubits. Its inverse QPS^{-1} is often used.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Roadmap</td>
+                  <td class="border border-gray-300 px-4 py-2"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mi>R</mi>
+                                <mo stretchy="false">(</mo>
+                                <mi>t</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                              <annotation encoding="application/x-tex">R(t)</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span></span></td>
+                  <td class="border border-gray-300 px-4 py-2">Function which outputs the expected number of physical qubits at the given year, considering the means of extrapolation and the growth of the roadmap.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Hardware Slowdown</td>
+                  <td class="border border-gray-300 px-4 py-2"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mn>1</mn>
+                                <msup>
+                                  <mn>0</mn>
+                                  <mtext>hws</mtext>
+                                </msup>
+                              </mrow>
+                              <annotation encoding="application/x-tex">10^{\text{hws}}</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">hws</span></span></span></span></span></span></span></span></span></span></span></span></span></span></td>
+                  <td class="border border-gray-300 px-4 py-2">The relative slowdown on quantum computers.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Quantum Improvement Rate</td>
+                  <td class="border border-gray-300 px-4 py-2"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mi>Q</mi>
+                                <mi>I</mi>
+                                <mi>R</mi>
+                              </mrow>
+                              <annotation encoding="application/x-tex">QIR</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span></span></td>
+                  <td class="border border-gray-300 px-4 py-2">The rate at which the hardware slowdown decreases.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Physical-Logical Qubit Ratio</td>
+                  <td class="border border-gray-300 px-4 py-2"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mi>P</mi>
+                                <mi>L</mi>
+                                <mi>Q</mi>
+                                <mi>R</mi>
+                              </mrow>
+                              <annotation encoding="application/x-tex">PLQR</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal">L</span><span class="mord mathnormal" style="margin-right:0.00773em;">QR</span></span></span></span></span></td>
+                  <td class="border border-gray-300 px-4 py-2">The number of physical qubits required to represent one logical qubit.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Physical-Logical Qubit Ratio Improvement Rate</td>
+                  <td class="border border-gray-300 px-4 py-2"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mi>R</mi>
+                                <mi>I</mi>
+                                <mi>R</mi>
+                              </mrow>
+                              <annotation encoding="application/x-tex">RIR</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span></span></td>
+                  <td class="border border-gray-300 px-4 py-2">The rate at which the physical-logical qubit ratio decreases.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Connectivity Penalty</td>
+                  <td class="border border-gray-300 px-4 py-2"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mi>P</mi>
+                                <mo stretchy="false">(</mo>
+                                <mi>q</mi>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                              <annotation encoding="application/x-tex">P(q)</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mclose">)</span></span></span></span></span></td>
+                  <td class="border border-gray-300 px-4 py-2">A function in terms of the number of logical qubits.</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Cost Improvement Rate</td>
+                  <td class="border border-gray-300 px-4 py-2"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mi>C</mi>
+                                <mi>I</mi>
+                                <mi>R</mi>
+                              </mrow>
+                              <annotation encoding="application/x-tex">CIR</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span></span></td>
+                  <td class="border border-gray-300 px-4 py-2">The rate at which the number of processors decreases.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-gray=900 text-justify my-4"> The framework calculates the minimum problem size needed for algorithmic advantage. This is the smallest problem size (<span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msup>
+                          <mi>n</mi>
+                          <mo>∗</mo>
+                        </msup>
+                      </mrow>
+                      <annotation encoding="application/x-tex">n^*</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6887em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span></span>) such that the runtime on quantum hardware is faster than the runtime on classical hardware. The expression for determining <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msup>
+                          <mi>n</mi>
+                          <mo>∗</mo>
+                        </msup>
+                      </mrow>
+                      <annotation encoding="application/x-tex">n^*</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6887em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span></span> is: </p>
+          <p class="text-gray=900 text-center my-4"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msup>
+                          <mi>n</mi>
+                          <mo>∗</mo>
+                        </msup>
+                        <mo>=</mo>
+                        <mi>n</mi>
+                        <mtext>&nbsp;</mtext>
+                        <mi mathvariant="normal">∣</mi>
+                        <mtext>&nbsp;</mtext>
+                        <mi>C</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo separator="true">,</mo>
+                        <mn>1</mn>
+                        <msup>
+                          <mn>0</mn>
+                          <mi>p</mi>
+                        </msup>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                        <msup>
+                          <mn>0</mn>
+                          <mtext>hws</mtext>
+                        </msup>
+                        <mo>⋅</mo>
+                        <mi>Q</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>⋅</mo>
+                        <mi>P</mi>
+                        <mo stretchy="false">(</mo>
+                        <msup>
+                          <mtext>QPS</mtext>
+                          <mrow>
+                            <mo>−</mo>
+                            <mn>1</mn>
+                          </mrow>
+                        </msup>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">n^* = n \text{ }|\text{ } C(n, 10^p) = 10^{\text{hws}} \cdot Q(n) \cdot P(\text{QPS}^{-1}(n))</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6887em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">∣</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">hws</span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1373em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord text"><span class="mord">QPS</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8873em;"><span style="top:-3.1362em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">))</span></span></span></span></span></p>
+          <p class="text-gray=900 text-justify my-4"> This expression finds the problem size such that quantum devices, including connectivity penalties and hardware slowdowns, are comparable to classical devices' runtimes, including parallelization. Note this expression calculates the current problem size needed for algorithmic advantage. The framework also incorporates the improvement of variables over time, with the trend of the required <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msup>
+                          <mi>n</mi>
+                          <mo>∗</mo>
+                        </msup>
+                      </mrow>
+                      <annotation encoding="application/x-tex">n^*</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6887em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span></span> forming the advantage line in the QEA graph. The generic expression for the advantage line given a year <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>t</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">t</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span></span></span></span></span> (which we'll label Adv()) becomes: </p>
+          <p class="text-gray=900 text-center my-4"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mtext>Adv</mtext>
+                        <mo stretchy="false">(</mo>
+                        <mi>t</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mi>n</mi>
+                        <mtext>&nbsp;</mtext>
+                        <mi mathvariant="normal">∣</mi>
+                        <mtext>&nbsp;</mtext>
+                        <mi>C</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo separator="true">,</mo>
+                        <mn>1</mn>
+                        <msup>
+                          <mn>0</mn>
+                          <mi>p</mi>
+                        </msup>
+                        <mo>∗</mo>
+                        <mo stretchy="false">(</mo>
+                        <mn>1</mn>
+                        <mo>+</mo>
+                        <mtext>CIR</mtext>
+                        <mi mathvariant="normal">/</mi>
+                        <mn>100</mn>
+                        <msup>
+                          <mo stretchy="false">)</mo>
+                          <mrow>
+                            <mi>t</mi>
+                            <mo>−</mo>
+                            <msub>
+                              <mi>t</mi>
+                              <mn>0</mn>
+                            </msub>
+                          </mrow>
+                        </msup>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                        <msup>
+                          <mn>0</mn>
+                          <mtext>hws</mtext>
+                        </msup>
+                        <mo>∗</mo>
+                        <mo stretchy="false">(</mo>
+                        <mn>1</mn>
+                        <mo>+</mo>
+                        <mtext>QIR</mtext>
+                        <mi mathvariant="normal">/</mi>
+                        <mn>100</mn>
+                        <msup>
+                          <mo stretchy="false">)</mo>
+                          <mrow>
+                            <mi>t</mi>
+                            <mo>−</mo>
+                            <msub>
+                              <mi>t</mi>
+                              <mn>0</mn>
+                            </msub>
+                          </mrow>
+                        </msup>
+                        <mo>∗</mo>
+                        <mi>Q</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>∗</mo>
+                        <mi>P</mi>
+                        <mo stretchy="false">(</mo>
+                        <msup>
+                          <mtext>QPS</mtext>
+                          <mrow>
+                            <mo>−</mo>
+                            <mn>1</mn>
+                          </mrow>
+                        </msup>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\text{Adv}(t) = n \text{ }|\text{ } C(n, 10^p * (1 + \text{CIR} / 100)^{t - t_0}) = 10^{\text{hws}} * (1 + \text{QIR} / 100)^{t - t_0} * Q(n) * P(\text{QPS}^{-1}(n))</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Adv</span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">∣</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0436em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">CIR</span></span><span class="mord">/100</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">hws</span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0436em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">QIR</span></span><span class="mord">/100</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1373em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord text"><span class="mord">QPS</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8873em;"><span style="top:-3.1362em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">))</span></span></span></span></span></p>
+          <p class="text-gray=900 text-justify my-4"> where <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>t</mi>
+                          <mn>0</mn>
+                        </msub>
+                      </mrow>
+                      <annotation encoding="application/x-tex">t_0</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7651em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> is the current year. The calculator also models feasibility over time. Given a selected roadmap, which includes the number of qubits achieved at target years and the desired extrapolation method, the tool calculates the maximum feasible problem size for each year. It also considers how many physical qubits are needed for logical qubits, their expected rate of change, and the conversion from logical qubits to the maximum solvable problem size. Using these factors, the framework computes the maximum feasible problem size at a given year <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>t</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">t</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span></span></span></span></span> (denoted as Feas(t)) as: </p>
+          <p class="text-gray=900 text-center my-4"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mtext>Feas</mtext>
+                        <mo stretchy="false">(</mo>
+                        <mi>t</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mtext>QPS</mtext>
+                        <mrow>
+                          <mo fence="true">(</mo>
+                          <mfrac>
+                            <mrow>
+                              <mi>R</mi>
+                              <mo stretchy="false">(</mo>
+                              <mi>t</mi>
+                              <mo stretchy="false">)</mo>
+                            </mrow>
+                            <mrow>
+                              <mtext>PLQR</mtext>
+                              <mo>∗</mo>
+                              <mo stretchy="false">(</mo>
+                              <mn>1</mn>
+                              <mo>+</mo>
+                              <mtext>RIR</mtext>
+                              <mi mathvariant="normal">/</mi>
+                              <mn>100</mn>
+                              <msup>
+                                <mo stretchy="false">)</mo>
+                                <mrow>
+                                  <mi>t</mi>
+                                  <mo>−</mo>
+                                  <msub>
+                                    <mi>t</mi>
+                                    <mn>0</mn>
+                                  </msub>
+                                </mrow>
+                              </msup>
+                            </mrow>
+                          </mfrac>
+                          <mo fence="true">)</mo>
+                        </mrow>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\text{Feas}(t) = \text{QPS}\left(\frac{R(t)}{\text{PLQR} * (1 + \text{RIR} / 100)^{t - t_0}}\right)</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Feas</span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.8em;vertical-align:-0.65em;"></span><span class="mord text"><span class="mord">QPS</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">PLQR</span></span><span class="mbin mtight">∗</span><span class="mopen mtight">(</span><span class="mord mtight">1</span><span class="mbin mtight">+</span><span class="mord text mtight"><span class="mord mtight">RIR</span></span><span class="mord mtight">/100</span><span class="mclose mtight"><span class="mclose mtight">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7611em;"><span style="top:-2.8218em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3448em;margin-left:0em;margin-right:0.1em;"><span class="pstrut" style="height:2.6444em;"></span><span class="mord mtight">0</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2996em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">t</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span></span></span></span></p>
+          <p class="text-gray=900 text-justify my-4"> With these formulations for how the problem size needed for advantage and the maximum feasible problem size change over time, we can express the time of Quantum Economic Advantage as their intersection. That is: </p>
+          <p class="text-gray=900 text-center my-4"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msup>
+                          <mi>t</mi>
+                          <mo>∗</mo>
+                        </msup>
+                        <mo>=</mo>
+                        <mi>t</mi>
+                        <mtext>&nbsp;</mtext>
+                        <mi mathvariant="normal">∣</mi>
+                        <mtext>&nbsp;Feas</mtext>
+                        <mo stretchy="false">(</mo>
+                        <mi>t</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mtext>Adv</mtext>
+                        <mo stretchy="false">(</mo>
+                        <mi>t</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">t^* = t \text{ }|\text{ } \text{Feas}(t) = \text{Adv}(t)</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6887em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">∣</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord text"><span class="mord">Feas</span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Adv</span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span></span></p>
+          <h2 class="text-2xl font-bold text-gray-800" id="Cost Advantage"> Cost Advantage </h2>
+          <p class="text-gray=900 text-justify my-4"> All of the insights provided by the calculator so far have been focused on determining when a specific instance of an algorithm would execute faster on equivalently priced quantum hardware compared to classical hardware. The calculator also provides the ability to determine when certain algorithms will become cheaper to execute on quantum hardware, even if this might take longer. This is achieved by adapting the previous expressions with new variables. </p>
+          <h3 class="text-xl font-bold text-gray-800 mt-8" id="Cost Inputs"> Cost Inputs </h3>
+          <p class="text-gray=900 text-justify my-4"> For speed comparisons, the tool evaluates quantum and classical hardware by comparing their runtimes, factoring in a hardware slowdown. For cost comparisons, the tool assesses the total computational effort required by each hardware, where the computational effort corresponds to the total number of operations required to complete the computation. These operations are directly related to the original problem's runtimes. </p>
+          <p class="text-gray=900 text-justify my-4"> Classical work (<span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>C</mi>
+                          <mi>w</mi>
+                        </msub>
+                      </mrow>
+                      <annotation encoding="application/x-tex">C_w</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>) is defined as the number of operations associated with the classical runtime when evaluated using a single processor. By default, classical work is evaluated as <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>C</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo separator="true">,</mo>
+                        <mn>1</mn>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">C(n, 1)</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span></span>, but users have complete flexibility to change it to a different expression. </p>
+          <p class="text-gray=900 text-justify my-4"> Quantum runtime reflects the depth of the circuit implementing the algorithm. To quantify the total computational effort, quantum work (<span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>Q</mi>
+                          <mi>w</mi>
+                        </msub>
+                      </mrow>
+                      <annotation encoding="application/x-tex">Q_w</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>) is defined as the product of the runtime and the number of logical qubits involved in the computation. Quantum work is expressed using an additional variable <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>q</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">q</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span></span>, which represents the number of logical qubits. By default, quantum work is the product of the quantum runtime and <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>q</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">q</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span></span>. The value of <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>q</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">q</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span></span></span></span></span> used in the expression is <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>Q</mi>
+                        <mi>P</mi>
+                        <msup>
+                          <mi>S</mi>
+                          <mrow>
+                            <mo>−</mo>
+                            <mn>1</mn>
+                          </mrow>
+                        </msup>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">QPS^{-1}(n)</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">QP</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></span>, reflecting how the required number of qubits changes with problem size. </p>
+          <p class="text-gray=900 text-justify my-4"> The final adjustment for cost comparison involves incorporating the cost factor (<span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mn>1</mn>
+                        <msup>
+                          <mn>0</mn>
+                          <mtext>cf</mtext>
+                        </msup>
+                      </mrow>
+                      <annotation encoding="application/x-tex">10^{\text{cf}}</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">cf</span></span></span></span></span></span></span></span></span></span></span></span></span></span>), which represents how much more expensive it is to perform operations on a quantum machine compared to a classical one. This cost factor is analogous to the hardware slowdown for speed and is input logarithmically. The cost factor can also vary over time, changing at a rate determined by the cost improvement rate. </p>
+          <h3 class="text-xl font-bold text-gray-800 mt-8" id="Cost Calculations"> Cost Calculations </h3>
+          <p class="text-gray=900 text-justify my-4"> The minimum problem size at which quantum computation becomes cheaper can be determined using the following expression: </p>
+          <p class="text-gray-900 text-center my-4"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <msubsup>
+                        <mi>n</mi>
+                        <mi>c</mi>
+                        <mo>∗</mo>
+                      </msubsup>
+                      <mo>=</mo>
+                      <mi>n</mi>
+                      <mtext>&nbsp;</mtext>
+                      <mi mathvariant="normal">∣</mi>
+                      <mtext>&nbsp;</mtext>
+                      <msub>
+                        <mi>C</mi>
+                        <mi>w</mi>
+                      </msub>
+                      <mo stretchy="false">(</mo>
+                      <mi>n</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo>=</mo>
+                      <mn>1</mn>
+                      <msup>
+                        <mn>0</mn>
+                        <mtext>cf</mtext>
+                      </msup>
+                      <mo>∗</mo>
+                      <msub>
+                        <mi>Q</mi>
+                        <mi>w</mi>
+                      </msub>
+                      <mo stretchy="false">(</mo>
+                      <mi>n</mi>
+                      <mo separator="true">,</mo>
+                      <msup>
+                        <mtext>QPS</mtext>
+                        <mrow>
+                          <mo>−</mo>
+                          <mn>1</mn>
+                        </mrow>
+                      </msup>
+                      <mo stretchy="false">(</mo>
+                      <mi>n</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo stretchy="false">)</mo>
+                      <mo>∗</mo>
+                      <mi>P</mi>
+                      <mo stretchy="false">(</mo>
+                      <msup>
+                        <mtext>QPS</mtext>
+                        <mrow>
+                          <mo>−</mo>
+                          <mn>1</mn>
+                        </mrow>
+                      </msup>
+                      <mo stretchy="false">(</mo>
+                      <mi>n</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo stretchy="false">)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">n_c^* = n \text{ }|\text{ } C_w(n) = 10^{\text{cf}} * Q_w(n, \text{QPS}^{-1}(n)) * P(\text{QPS}^{-1}(n))</annotation>
+                  </semantics>
+                </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9357em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-2.453em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">∣</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">cf</span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1373em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord text"><span class="mord">QPS</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8873em;"><span style="top:-3.1362em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">))</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1373em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord text"><span class="mord">QPS</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8873em;"><span style="top:-3.1362em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">))</span></span></span></span></p>
+          <p class="text-gray=900 text-justify my-4"> The trend in <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msubsup>
+                          <mi>n</mi>
+                          <mi>c</mi>
+                          <mo>∗</mo>
+                        </msubsup>
+                      </mrow>
+                      <annotation encoding="application/x-tex">n_c^*</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9357em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-2.453em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span></span> over time defines the cost advantage, which is expressed as <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mtext>Adv</mtext>
+                          <mi>c</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mi>t</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\text{Adv}_c(t)</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord text"><span class="mord">Adv</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span></span>: </p>
+          <p class="text-gray-900 text-center my-4"><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mtext>Adv</mtext>
+                          <mi>c</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mi>t</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mi>n</mi>
+                        <mtext>&nbsp;</mtext>
+                        <mi mathvariant="normal">∣</mi>
+                        <mtext>&nbsp;</mtext>
+                        <msub>
+                          <mi>C</mi>
+                          <mi>w</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                        <msup>
+                          <mn>0</mn>
+                          <mtext>cf</mtext>
+                        </msup>
+                        <mo>∗</mo>
+                        <mo stretchy="false">(</mo>
+                        <mn>1</mn>
+                        <mo>+</mo>
+                        <mtext>CIR</mtext>
+                        <mi mathvariant="normal">/</mi>
+                        <mn>100</mn>
+                        <msup>
+                          <mo stretchy="false">)</mo>
+                          <mrow>
+                            <mi>t</mi>
+                            <mo>−</mo>
+                            <msub>
+                              <mi>t</mi>
+                              <mn>0</mn>
+                            </msub>
+                          </mrow>
+                        </msup>
+                        <mo>∗</mo>
+                        <msub>
+                          <mi>Q</mi>
+                          <mi>w</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo separator="true">,</mo>
+                        <msup>
+                          <mtext>QPS</mtext>
+                          <mrow>
+                            <mo>−</mo>
+                            <mn>1</mn>
+                          </mrow>
+                        </msup>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo stretchy="false">)</mo>
+                        <mo>∗</mo>
+                        <mi>P</mi>
+                        <mo stretchy="false">(</mo>
+                        <msup>
+                          <mtext>QPS</mtext>
+                          <mrow>
+                            <mo>−</mo>
+                            <mn>1</mn>
+                          </mrow>
+                        </msup>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\text{Adv}_c(t) = n \text{ }|\text{ } C_w(n) = 10^{\text{cf}} * (1 + \text{CIR} / 100)^{t - t_0} * Q_w(n, \text{QPS}^{-1}(n)) * P(\text{QPS}^{-1}(n))</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord text"><span class="mord">Adv</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">∣</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">cf</span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0436em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">CIR</span></span><span class="mord">/100</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1373em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord text"><span class="mord">QPS</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8873em;"><span style="top:-3.1362em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">))</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1373em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord text"><span class="mord">QPS</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8873em;"><span style="top:-3.1362em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">))</span></span></span></span></span></p>
+          <p class="text-gray=900 text-justify my-4"> Since feasibility is not affected by cost considerations, the time at which it becomes cheaper to perform the problem on quantum hardware is determined by the intersection of <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mtext>Adv</mtext>
+                          <mi>c</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mi>t</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\text{Adv}_c(t)</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord text"><span class="mord">Adv</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span></span> and <span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mtext>Feas</mtext>
+                        <mo stretchy="false">(</mo>
+                        <mi>t</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\text{Feas}(t)</annotation>
+                    </semantics>
+                  </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Feas</span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span></span>: </p>
+          <p class="text-gray-900 text-center my-4"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <msubsup>
+                        <mi>t</mi>
+                        <mi>c</mi>
+                        <mo>∗</mo>
+                      </msubsup>
+                      <mo>=</mo>
+                      <mi>t</mi>
+                      <mtext>&nbsp;</mtext>
+                      <mi mathvariant="normal">∣</mi>
+                      <mtext>&nbsp;Feas</mtext>
+                      <mo stretchy="false">(</mo>
+                      <mi>t</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo>=</mo>
+                      <msub>
+                        <mtext>Adv</mtext>
+                        <mi>c</mi>
+                      </msub>
+                      <mo stretchy="false">(</mo>
+                      <mi>t</mi>
+                      <mo stretchy="false">)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">t_c^* = t \text{ }|\text{ } \text{Feas}(t) = \text{Adv}_c(t)</annotation>
+                  </semantics>
+                </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9357em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-2.453em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord">∣</span><span class="mord text"><span class="mord">&nbsp;</span></span><span class="mord text"><span class="mord">Feas</span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord text"><span class="mord">Adv</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span></span></span></span></p>
+        </div>
+      </div>
+      <div data-v-666660e9="" class="bg-[#002D9D] py-4 px-8 mt-16">
+        <div data-v-666660e9="" class="mx-auto flex flex-col gap-4 items-center">
+          <hr class="w-full border-white/30" data-v-666660e9="">
+          <div class="flex gap-8 items-center justify-center" data-v-666660e9=""><a class="max-w-[350px] w-full" href="https://futuretech.mit.edu" target="_blank" data-v-666660e9=""><img src="/futuretech.svg" alt="" data-v-666660e9=""></a><a class="max-w-[350px] w-full" href="https://www.accenture.com" target="_blank" data-v-666660e9=""><img src="/Accenture_logo.svg" alt="" data-v-666660e9=""></a></div>
+          <hr class="w-full border-white/30" data-v-666660e9="">
+          <div data-v-666660e9="" class="text-white text-sm py-3 text-center">
+            <p data-v-666660e9="">© 2025 Quantum Economic Advantage Calculator</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
